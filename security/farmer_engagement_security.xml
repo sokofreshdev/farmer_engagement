@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.module.category" id="module_category_farmer_engagement">
+        <field name="name">Farmer Engagement</field>
+        <field name="parent_id" ref="base.module_category_operations_inventory" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="group_farmer_engagement_user" model="res.groups">
+        <field name="name">Farmer Engagement User</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="category_id" ref="module_category_farmer_engagement" />
+    </record>
+     <record id="group_farmer_engagement_manager" model="res.groups">
+        <field name="name">Farmer Engagement Manager</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="category_id" ref="module_category_farmer_engagement" />
+    </record>
+
+
+
+        <record id="farmer_engagement_user_rule" model="ir.rule">
+            <field name="name">Farmer Engagement User</field>
+            <field name="model_id" ref="model_res_partner" />
+            <field name="groups" eval="[(6,0, [ref('group_farmer_engagement_user')])]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_create" eval="True" />
+            <field name="perm_unlink" eval="True" />
+            <field name="domain_force">[('responsible_id','=',user.id)]</field>
+        </record>
+
+
+
+
+
+
+</odoo>

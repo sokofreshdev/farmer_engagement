@@ -14,6 +14,7 @@
 
         "views/farmer_registration.xml",
         "views/res_partner_county.xml",
+        "security/farmer_engagement_security.xml",
         "security/ir.model.access.csv",
        "data/farmer_registration_seq.xml",
 
