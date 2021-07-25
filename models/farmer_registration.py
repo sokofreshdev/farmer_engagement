@@ -93,11 +93,11 @@ class FarmerRegistration(models.Model):
                               rec.name)
             rec.write({'state': 'reject'})
 
-    def reject(self):
+    def reset(self):
         for rec in self:
             rec.write({'state': 'new'})
-
-    @api.onchange("state")
+    #To-do if user is mfarmer manager autoapprove record
+    #@api.onchange("state")
     def onchange_state(self):
         for rec in self:
             if self.env.user.has_group('farmer_engagement.group_farmer_engagement_manager'):
