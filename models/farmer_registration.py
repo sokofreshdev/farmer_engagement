@@ -12,6 +12,7 @@ class FarmerRegistration(models.Model):
     reg_no = fields.Char("No#",readonly=True)
     id_number = fields.Char("ID Number")
     county = fields.Many2one("res.partner.county",string="County")
+    sub_county = fields.Many2one("res.partner.subcounty", string="SubCounty")
     wards = fields.Many2one("res.partner.ward", string="Ward")
     gps_location = fields.Char("Gps Location")
     partner_type = fields.Selection([('farmer','Farmer'),('agent','Agents'),('harvester','Harvesters'),('others','Others')], string="Type")

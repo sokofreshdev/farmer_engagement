@@ -97,7 +97,7 @@
 
                             <field name="name" required="1"/>
 
-                            <field name="ward"/>
+                            <field name="subcounty"/>
 
 
                         </group>
@@ -195,14 +195,19 @@
               groups="farmer_engagement.group_farmer_engagement_manager"  parent="menu_farmer_engagement"/>
 
 
-    <menuitem id="menu_county" name="County Setup" parent="menu_farmer_engagement_config" sequence="20"
+    <menuitem id="menu_county" name="County Setup" parent="menu_farmer_engagement_config" sequence="3"
               action="res_partner_county_act" groups="farmer_engagement.group_farmer_engagement_manager"/>
 
     <menuitem id="menu_ward" name="Ward Setup" parent="menu_farmer_engagement_config" action="res_partner_ward_act"
-              groups="farmer_engagement.group_farmer_engagement_manager" sequence="6"/>
+              groups="farmer_engagement.group_farmer_engagement_manager" sequence="5"/>
 
      <menuitem id="menu_farmer_engagement_groups" name="Farmer Groups" parent="menu_farmer_engagement_config" action="base.action_partner_category_form"
               groups="farmer_engagement.group_farmer_engagement_manager" sequence="6"/>
+
+    <menuitem id="menu_subcounty" name="Subcounty Setup" parent="menu_farmer_engagement_config" action="res_partner_subcounty_act"
+              groups="farmer_engagement.group_farmer_engagement_manager" sequence="4"/>
+
+
 
 
 

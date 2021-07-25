@@ -19,6 +19,7 @@ class ResPartnerSubCounty(models.Model):
 
     name = fields.Char("Sub-County Name",required=True)
     ward = fields.Many2one("res.partner.ward")
+    subcounty = fields.Many2one("res.partner.county", string="County")
 
 class ResPartnerWard(models.Model):
     _name = 'res.partner.ward'
