@@ -173,7 +173,7 @@
 
     </data>
     <menuitem id="menu_farmer_engagement" name="Farmer Engagement" sequence="1"
-              groups="sales_team.group_sale_manager"  web_icon="farmer_engagement,static/description/farmer_engagement.png"/>
+              groups="farmer_engagement.group_farmer_engagement_manager"  web_icon="farmer_engagement,static/description/farmer_engagement.png"/>
     <menuitem  parent="farmer_engagement.menu_farmer_engagement"
               id="menu_registration"
               name="Registration" sequence="1"
